@@ -1,4 +1,4 @@
-# sowm (*~~Simple~~ Shitty Opinionated Window Manager*)
+# MiniWM (*Mini Window Manager*)
 
 <a href="https://user-images.githubusercontent.com/6799467/66687576-9747c200-ec72-11e9-947d-5b96753eab03.jpg"><img src="https://user-images.githubusercontent.com/6799467/66687576-9747c200-ec72-11e9-947d-5b96753eab03.jpg" width="43%" align="right"></a>
 
@@ -65,34 +65,19 @@ Patches available here: https://github.com/dylanaraps/sowm/pulls
 ## Installation
 
 1) Copy `config.def.h` to `config.h` and modify it to suit your needs.
-2) Run `make` to build `sowm`.
+2) Run `make` to build `miniwm`.
 3) Copy it to your path or run `make install`.
     - `DESTDIR` and `PREFIX` are supported.
 4) (Optional) Apply patch with `git apply patches/patch-name`
     - In case of applying multiple patches, it has to be done **manually**.
 
-If you are using GDM, save the following to `/usr/share/xsessions/sowm.desktop`. It is still recommended to start `sowm` from `.xinitrc` or through
+If you are using GDM, save the following to `/usr/share/xsessions/miniwm.desktop`. It is still recommended to start `miniwm` from `.xinitrc` or through
 [your own xinit implementation](https://github.com/dylanaraps/bin/blob/dfd9a9ff4555efb1cc966f8473339f37d13698ba/x).
 
 ```
 [Desktop Entry]
-Name=sowm
-Comment=This session runs sowm as desktop manager
-Exec=sowm
+Name=miniwm
+Comment=This session runs miniwm as desktop manager
+Exec=miniwm
 Type=Application
 ```
-
-
-## Thanks
-
-- [2bwm](https://github.com/venam/2bwm)
-- [SmallWM](https://github.com/adamnew123456/SmallWM)
-- [berry](https://github.com/JLErvin/berry)
-- [catwm](https://github.com/pyknite/catwm)
-- [dminiwm](https://github.com/moetunes/dminiwm)
-- [dwm](https://dwm.suckless.org)
-- [monsterwm](https://github.com/c00kiemon5ter/monsterwm)
-- [openbox](https://github.com/danakj/openbox)
-- [possum-wm](https://github.com/duckinator/possum-wm)
-- [swm](https://github.com/dcat/swm)
-- [tinywm](http://incise.org/tinywm.html)
