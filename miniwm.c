@@ -1,4 +1,4 @@
-// sowm - An itsy bitsy floating window manager.
+// miniwm - An mini floating window manager inspired by sowm.
 
 #include <X11/Xlib.h>
 #include <X11/XF86keysym.h>
@@ -8,7 +8,7 @@
 #include <signal.h>
 #include <unistd.h>
 
-#include "sowm.h"
+#include "miniwm.h"
 
 static client       *list = {0}, *ws_list[10] = {0}, *cur;
 static int          ws = 1, sw, sh, wx, wy, numlock = 0;

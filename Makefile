@@ -4,21 +4,21 @@ PREFIX ?= /usr
 BINDIR ?= $(PREFIX)/bin
 CC     ?= gcc
 
-all: sowm
+all: miniwm
 
 config.h:
 	cp config.def.h config.h
 
-sowm: sowm.c sowm.h config.h Makefile
+miniwm: miniwm.c miniwm.h config.h Makefile
 	$(CC) -O3 $(CFLAGS) -o $@ $< -lX11 $(LDFLAGS)
 
 install: all
-	install -Dm755 sowm $(DESTDIR)$(BINDIR)/sowm
+	install -Dm755 miniwm $(DESTDIR)$(BINDIR)/miniwm
 
 uninstall:
-	rm -f $(DESTDIR)$(BINDIR)/sowm
+	rm -f $(DESTDIR)$(BINDIR)/miniwm
 
 clean:
-	rm -f sowm *.o
+	rm -f miniwm *.o
 
 .PHONY: all install uninstall clean
